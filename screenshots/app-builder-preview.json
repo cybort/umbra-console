@@ -1,0 +1,36 @@
+{
+  "url": "http://127.0.0.1:8080/",
+  "viewports": {
+    "desktop": {
+      "width": 1280,
+      "height": 800,
+      "status": 200,
+      "title": "灰域 UMBRA",
+      "hasCanvas": false,
+      "bodyTextLen": 2008,
+      "bodyTextHash": "ca1a4f8235f9fb8db47a94360e983d22ade1475963f9c432421b08f4daeded6f",
+      "bodyTextPrefix": "灰域 UMBRA 紧急查杀控制台 WIN-FIN-07 / Windows 11 23H2 实验室快照 伪装身份 开始紧急扫描 ",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/app-builder-preview.png"
+    },
+    "mobile": {
+      "width": 390,
+      "height": 844,
+      "status": 200,
+      "title": "灰域 UMBRA",
+      "hasCanvas": false,
+      "bodyTextLen": 301,
+      "bodyTextHash": "31b759dc86f1c2243126ae14e18d2e6f7bc73650c8525d2ac555ed560e640299",
+      "bodyTextPrefix": "灰域 UMBRA WIN-FIN-07 / Windows 11 23H2 实验室快照 开始紧急扫描 尚未扫描。选择快照或物理主",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/app-builder-preview-mobile.png"
+    }
+  },
+  "brandWarnings": [],
+  "authWarnings": [],
+  "verdictFile": "/workspace/screenshots/app-builder-preview.json"
+}

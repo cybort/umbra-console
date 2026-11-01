@@ -1,0 +1,108 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Noto Sans SC", "IBM Plex Sans", system-ui, sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+
+  --color-bg: #0c0d0c;
+  --color-surface: #141514;
+  --color-surface-2: #1b1c1a;
+  --color-fg: #e8e6df;
+  --color-muted: #8b8d86;
+  --color-subtle: #6a6c66;
+  --color-primary: #c5c9be;
+  --color-primary-fg: #141514;
+  --color-border: color-mix(in oklab, var(--color-fg) 12%, transparent);
+  --color-border-strong: color-mix(in oklab, var(--color-fg) 22%, transparent);
+  --color-line: color-mix(in oklab, var(--color-fg) 8%, transparent);
+  --color-crit: #c45c4a;
+  --color-high: #b57a5a;
+  --color-med: #9a9378;
+  --color-low: #7d847c;
+  --color-ok: #6e8b6e;
+  --color-ring: #c5c9be;
+
+  --text-micro: 0.625rem;
+  --text-2xs: 0.6875rem;
+  --radius-xs: 4px;
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-xl: 24px;
+
+  --shadow-border: 0 0 0 1px color-mix(in oklab, var(--color-fg) 10%, transparent);
+}
+
+@layer base {
+  html {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  html[data-cover="true"] {
+    --color-bg: #101110;
+    --color-surface: #171817;
+    --color-surface-2: #1e1f1d;
+    --color-primary: #d2d4ce;
+  }
+
+  body {
+    background: var(--color-bg);
+    color: var(--color-fg);
+    font-family: var(--font-sans);
+  }
+
+  button:not(:disabled),
+  [role="button"]:not(:disabled) {
+    cursor: pointer;
+  }
+
+  h1,
+  h2,
+  h3 {
+    text-wrap: balance;
+  }
+
+  p {
+    text-wrap: pretty;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+@keyframes umbra-pulse {
+  0%,
+  100% {
+    opacity: 0.35;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+@keyframes umbra-in {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.umbra-in {
+  animation: umbra-in 250ms cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.watchdog-dot {
+  animation: umbra-pulse 1.2s ease-in-out infinite;
+}
